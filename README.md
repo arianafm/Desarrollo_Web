@@ -154,3 +154,12 @@ La propiedad para modificar el fondo es background por lo que si queremos tener 
 En términos generales hace referencia al cómo se elige que valor tendrá una propiedad de un elemento HTML. Este comportamiento está pensado en modificar un elemento dependiendo de múltiples criterios.  
 Además, considera el uso de hojas de estilo predefinidas. Estas hojas nos ayudan a empezar el diseño de nuestras páginas web.  
 _Nota: En el concepto de cascada existe el orden de precedencia._
+
+# Primeros pasos en desarrollo Web #
+
+## Archivos HTML ##
+
+Los documentos base que enviamos al navegador para desplegar nuestra página web son archivos con la extensión HTML mismos que contienen las etiquetas con los elementos que componen nuestra página web.
+
+
+
