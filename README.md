@@ -161,5 +161,65 @@ _Nota: En el concepto de cascada existe el orden de precedencia._
 
 Los documentos base que enviamos al navegador para desplegar nuestra página web son archivos con la extensión HTML mismos que contienen las etiquetas con los elementos que componen nuestra página web.
 
+Los archivos HTML que vayamos creando pueden ser nombrados como queramos pero siempre deben llevar la terminación ".html". Además por convención es nombramos a la página principal o de bienvenida "index.html". La intención es que este archivo sirva como el índice de tu página desde el cual puedes ir hacía otras páginas más.
 
+## Editores en línea ##
+
+En internet existen un sinfín de editores interactivos de html por ejemplo [CODEPEN](https://codepen.io/)), ahí puedes crear proyectos con HTML, CSS, JS pero también explorar el trabajo de otras personas.  
+También existe [JS Bin](https://jsbin.com/?html,output) pero está más especializado en JavaScript.  
+
+## Especificar el tipo de documento ##
+```
+<!DOCTYPE html> 
+```
+Está será nuestra primera línea de código en todos nuestros archivos HTML. No es una etiqueta (por eso no hay un cierre en la declaración), es una declaración de que versión de HTML usaremos en el documento (en este caso HTML 5). Está declaración le sirve al navegador para saber cómo leer y desplegar el documento HTML.
+
+## Elementos básicos de una página ##
+
+Veamos la estructura básica de cualquier página que crearemos más adelante.
+```
+<!DOCTYPE html> 
+
+<html> 
+    <head>
+        <title>Título</title>
+        <meta charset="utf-8">
+    </head>
+    <body></body>
+</html>
+```
+
+_Nota : Todas estas etiquetas (salvo que se indique lo contrario) sólo deben colocarse una vez (i.e., no puede repetirse) durante el documento._
+
+Etiqueta            | Descripción
+------------------- | -------------
+`<!DOCTYPE html>`   | Define el tipo de documento.
+`<html>`            | Raíz del documento.
+`<head>`            | Contiene metadatos (i.e., datos que describen otros datos) / información del documento. _Nota: No es visible en nuestra página, solo la describen._
+`<title>`           | Define un título para el documento.
+`<meta>`            | Define metadatos sobre un documento HTML (para crear páginas en español usamos el siguiente conjunto de caracteres: "utf-8"). _Nota: Esta etiqueta sí se repite._
+`<body>`            | Contiene todo lo que es visible en la página.
+
+
+## Metadatos ##
+
+Llamamos metadatos a los que describen a otros datos.  
+Un metadato NO es la información central, es la información añadida sobre la información central.  
+Es importante usarlos correctamente para mejorar la visibilidad del sitio web.
+Su etiqueta es la siguiente: `<meta>`.  
+La estructura que siguen la mayoría de los metadatos (que definimos con la etiqueta anterior) es la siguiente:  
+<meta name="description" content="">   
+Tienen un nombre que se asigna en el atributo **name** y un valor que se asigna en el atributo **content**.  
+Otros metadatos importantes son los de el protocolo open graph (este protocolo define los nombres que llevan los metadatos y que valor se le asigna a cada uno de ellos), además este protocolo es usado por redes sociales para mostrarte previews.  
+Ahora veamos algunas etiquetas que forman parte del protocolo open graph (op):  
+```
+        <meta name="og:title" content="CV de Ariana Fernández"> <!-- Título que aparece en la vista previa del link. -->
+        <meta name="og:description" content="Ariana es actualmente estudiante de la carrera de Ciencias de la Computación
+        en la Facultad de Ciencias de la UNAM."> <!-- Descripción que aparece abajo del título. -->
+        <meta name="og:url" content="http://ariana.me"> <!-- Dirección a la cual debe de direccionar el link -->
+        <meta name="og:site_name" content="Proyectos personales Ariana"> <!-- Nombre del sitio. -->
+        <meta name="og:type" content="website"> <!-- Tipo de contenido que estamos compartiendo -->
+        <meta name="og:image" content="<url-imagen>"> <!-- Imagen que aparece arriba de toda esta información. -->
+```
+## Atributos ##
 
