@@ -195,7 +195,7 @@ Etiqueta            | Descripción
 ------------------- | -------------
 `<!DOCTYPE html>`   | Define el tipo de documento.
 `<html>`            | Raíz del documento.
-`<head>`            | Contiene metadatos (i.e., datos que describen otros datos) / información del documento. _Nota: No es visible en nuestra página, solo la describen._
+`<head>`            | Contiene metadatos (i.e., datos que describen otros datos) / información del documento. _Nota: No es visible en nuestra página, solo la describen._ 
 `<title>`           | Define un título para el documento.
 `<meta>`            | Define metadatos sobre un documento HTML (para crear páginas en español usamos el siguiente conjunto de caracteres: "utf-8"). _Nota: Esta etiqueta sí se repite._
 `<body>`            | Contiene todo lo que es visible en la página.
@@ -213,13 +213,94 @@ Tienen un nombre que se asigna en el atributo **name** y un valor que se asigna 
 Otros metadatos importantes son los de el protocolo open graph (este protocolo define los nombres que llevan los metadatos y que valor se le asigna a cada uno de ellos), además este protocolo es usado por redes sociales para mostrarte previews.  
 Ahora veamos algunas etiquetas que forman parte del protocolo open graph (op):  
 ```
-        <meta name="og:title" content="CV de Ariana Fernández"> <!-- Título que aparece en la vista previa del link. -->
-        <meta name="og:description" content="Ariana es actualmente estudiante de la carrera de Ciencias de la Computación
-        en la Facultad de Ciencias de la UNAM."> <!-- Descripción que aparece abajo del título. -->
-        <meta name="og:url" content="http://ariana.me"> <!-- Dirección a la cual debe de direccionar el link -->
-        <meta name="og:site_name" content="Proyectos personales Ariana"> <!-- Nombre del sitio. -->
-        <meta name="og:type" content="website"> <!-- Tipo de contenido que estamos compartiendo -->
-        <meta name="og:image" content="<url-imagen>"> <!-- Imagen que aparece arriba de toda esta información. -->
+    <meta name="og:title" content="CV de Ariana Fernández"> <!-- Título que aparece en la vista previa del link. -->
+    <meta name="og:description" content="Ariana es actualmente estudiante de la carrera de Ciencias de la Computación
+    en la Facultad de Ciencias de la UNAM."> <!-- Descripción que aparece abajo del título. -->
+    <meta name="og:url" content="http://ariana.me"> <!-- Dirección a la cual debe de direccionar el link -->
+    <meta name="og:site_name" content="Proyectos personales Ariana"> <!-- Nombre del sitio. -->
+    <meta name="og:type" content="website"> <!-- Tipo de contenido que estamos compartiendo -->
+    <meta name="og:image" content="<url-imagen>"> <!-- Imagen que aparece arriba de toda esta información. -->
 ```
 ## Atributos ##
 
+Los atributos proporcionan información adicional sobre los elementos.
+Todos los elementos HTML pueden tener atributos, algunos requieren de ciertos atributos para funcionar (como las etiqietas de metadatos).
+Se describen con un nombre y un valor.
+Por ejemplo:
+```
+    <body>
+        <p nombre= "valor" ></p>
+        <input autofocus>
+    </body>
+```  
+El valor de un atributo se coloca entre comillas pues se acostumbre.
+El nombre se separa del valor por medio de un =.
+El atributo autofocus se conoce como un booleano.
+Como cualquier valor que asignemos a un atributo los hace verdaderos estos pueden no tener valor, solo por estar ya será verdadero.
+
+## Cómo se ve nuestro primer proyecto ##
+
+Haremos un CV.  
+Tendremos:
+Un encabezado  
+Una imagen  
+Listas  
+Entre otras cosas.
+
+## Encabezado de nuestra página ##
+
+_Nota : Todas estas etiquetas no pueden repetirse durante el documento._  
+Etiqueta            | Descripción
+------------------- | -------------
+`<header>`          | Especificar encabezados de una página web.
+`<p>`               | Etiqueta para colocar párrafos.
+`<div>`             | Agrupa elementos. Buscamos agruparlos para cuando modificamos las propiedades en CSS podamos limitar las modificaciones a ese grupo. También lo usamos para crear elementos cuyo único proposito sea recibir propiedades CSS.
+
+## El atributo style ##
+Se puede aplicar a todos los elementos que se ven visualmente en la pantalla.  
+Se pueden especificar propiedades CSS que modifiquen el cómo se presentan y se muestran los elementos en la página.  
+_Nota: No es una buena práctica especificar las propiedades visuales de un elemento a través del atributo style._  
+
+## Colores ##
+Los colores se pueden expresar de distintas formas:   
+* Por el nombre del color (ej. pink / white/ blue...)  
+* Formato hexadecimal (ej. #464469)  
+(Puedes encontrar muchos más poniendo color picker en google).  
+* Formato RGB (ej. 70, 68, 105 )    
+Los valores representan lo siguiente: (rojo, verde, azul).  
+Ejemplos vistos: background-color, color, 
+
+## Tipografía ##
+Se refiere al diseño de las letras.  
+Modificaciones que pueden hacerse: Tipo de fuente, tamaño, sombras, color, alineamiento, etc...  
+Ejemplos vistos: font-family, text-align, font-weight , text-transform: uppercase,
+
+## Títulos ##
+Tienen el trabajo de describir los temas principales del sitio.  
+Los títulos se especifican con las etiquetas h, ejemplo: `<h1>, <h2>, ...`
+La palabra de mayor peso en el sitio web debe colocarse en un `<h1>`.
+Es importante señalar que un documento usará únicamente una vez la etiqueta `<h1>` por documento.
+
+## Espacios en blanco ##
+Lugares donde NO hay elementos o contenido.
+"Es lo que hace que el diseño de un sitio web, respire".
+Ejemplos vistos: padding, 
+_Nota: Al iniciar una página, esta puede venir con un margen por defecto. Para quitarselo podemos hacer: `margin: 0px;` _
+
+## Listas ##
+Tipos de listas que existen:
+* Ordenadas  
+<img width="703" alt="Captura de Pantalla 2021-02-07 a la(s) 21 55 33" src="https://user-images.githubusercontent.com/41757059/107174192-3677e900-698f-11eb-9d83-d303288af921.png">
+Son ideales para: Rankings, Posiciones, Serie de pasos, etc...  
+
+* Desordenadas  
+Aquellas que no guardan un orden.
+ <img width="703" alt="Captura de Pantalla 2021-02-07 a la(s) 22 00 07" src="https://user-images.githubusercontent.com/41757059/107174442-d9c8fe00-698f-11eb-9876-0ff520c800b7.png">
+Son ideales para: Elementos sin orden, elementos en común, elementos que describen, etc...
+
+* De definición  
+<img width="703" alt="Captura de Pantalla 2021-02-07 a la(s) 22 02 02" src="https://user-images.githubusercontent.com/41757059/107174548-1dbc0300-6990-11eb-9074-c626d979d55b.png">
+Son ideales para: Diccionarios, conceptos, puntos con explicaciones, etc...
+
+
+Ejemplos vistos: 
