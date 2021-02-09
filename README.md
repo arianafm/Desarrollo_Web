@@ -335,4 +335,5 @@ En caso de querer agregar nuestra foto, usamos lo siguiente:
 ## Subir página a internet (gratis) ##
 Existen muchas opciones para subir tu sitio web, usualmente tienen un costo.  
 Los gastos son por el hosting y el dominio. El precio del hosting dependerá de la capacidad de almacenamiento y en el caso del dominio dependerá de qué tipo de dominio quieras (.com, .com.mx), etc...  
-Para subir nuestro proyecto, usaremos GitHub.
+Para subir nuestro proyecto gratis a la web, usaremos GitHub Pages. Seguiremos los pasos encontrados en: 
+[GitHub Pages](https://pages.github.com/)
