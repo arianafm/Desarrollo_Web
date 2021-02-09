@@ -303,4 +303,36 @@ Son ideales para: Elementos sin orden, elementos en común, elementos que descri
 Son ideales para: Diccionarios, conceptos, puntos con explicaciones, etc...
 
 
-Ejemplos vistos: 
+## Links ##
+Elementos que nos dirigen a nuevas partes de un sitio web o a otras páginas.  
+Usaremos: `<a href= "¿a dónde vamos?"> </a>`  
+Si queremos que lo abra en una nueva pestaña, usaremos target:   
+`<a href= "¿a dónde vamos?" target="_blank"> </a>`  
+
+## Imágenes ##
+Usaremos la siguiente etiqueta:  
+`<img src="">`  
+La ruta debe ser _relativa_ (Relativas al lugar en el que está la página).  
+En caso de querer agregar nuestra foto, usamos lo siguiente:
+```
+<div>
+    <div style="display: inline-block; width:65%; vertical-align:top;">
+        <h3 style="font-size: 35px;font-weight: bold; "> Education</h3>
+        <div>
+            <dl>
+                <dt style="font-style: 25px; font-weight: bold; margin-bottom: 10px; margin-top: 30px;"> Facultad de Ciencias, Universidad Nacional Autónoma de México.</dt>
+                <dd style="margin: 0px;"> Bachelor Degree in Computer Science. August, 2018 - Present. </dd>
+                
+            </dl>
+        </div>
+    </div>
+    <div style="display: inline-block; width: 30%; margin-top: 25px;">
+        <img src="img/Ariana.png" width="300">
+    </div>
+</div>
+```
+
+## Subir página a internet (gratis) ##
+Existen muchas opciones para subir tu sitio web, usualmente tienen un costo.  
+Los gastos son por el hosting y el dominio. El precio del hosting dependerá de la capacidad de almacenamiento y en el caso del dominio dependerá de qué tipo de dominio quieras (.com, .com.mx), etc...  
+Para subir nuestro proyecto, usaremos GitHub.
