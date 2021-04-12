@@ -337,3 +337,183 @@ Existen muchas opciones para subir tu sitio web, usualmente tienen un costo.
 Los gastos son por el hosting y el dominio. El precio del hosting dependerá de la capacidad de almacenamiento y en el caso del dominio dependerá de qué tipo de dominio quieras (.com, .com.mx), etc...  
 Para subir nuestro proyecto gratis a la web, usaremos GitHub Pages. Seguiremos los pasos encontrados en: 
 [GitHub Pages](https://pages.github.com/)
+
+# Concentrando el conocimiento #
+
+## Cómo configurar un servidor web ##
+Cuando hablamos de servidores web, podemos referirnos a dos cosas:
+* A la computadora que aloja o almacena un sitio web
+* Al programa que se encarga de procesar las peticiones de los clientes para poder enviarte a la página web.
+
+En la siguiente [página](https://gist.github.com/willurd/5720255), podemos ver distintas formas en las que podemos ver distintas formas a través de las cuales podemos ejecutar un servidor web.
+
+Nosotros, estaremos utilizando Node.js 
+Node.js es un entorno de ejecución del lenguaje JavaScript.  
+Lo primero será descargar Node.js y hacer la instalación en nuestra computadora.
+Una vez instalado Node.js será muy sencillo iniciar un servidor web.  
+Abriremos nuestra terminal y veremos si se instalo correctamente usando `node -v`, además verificaremos que npm también fue instalado de manera correcta usando `npm -v`. npm es un manejador de paquetes con el cual podemos instalar librerías que están hechas para este entorno de ejecución.  
+El servidor web lo instalaremos usando el siguiente comando: `sudo npm install -g node-static`.  
+Notemos que la libreria node-static quedo instalada:  
+<img width="682" alt="Captura de Pantalla 2021-02-10 a la(s) 11 59 35" src="https://user-images.githubusercontent.com/41757059/107552222-c9d03a80-6b98-11eb-861d-0cb717d167a1.png">  
+Ahora, iniciaremos nuestro propio servidor web (lo probaremos con nuestro CV).  
+Por lo cual nos moveremos a la carpeta donde tenemos guardado nuestro proyecto.  
+<img width="682" alt="Captura de Pantalla 2021-02-10 a la(s) 12 12 55" src="https://user-images.githubusercontent.com/41757059/107552592-53800800-6b99-11eb-8f0f-6ba67674984e.png">  
+Posteriormente, usaremos el siguiente comando: `static -p 8000` y nos dirá en qué dirección se está ejecutando nuestro servidor.  
+<img width="682" alt="Captura de Pantalla 2021-02-10 a la(s) 12 16 03" src="https://user-images.githubusercontent.com/41757059/107552950-c4bfbb00-6b99-11eb-8ef1-d86bd01049f0.png">
+Y en nuestro navegador podremos poner `http://127.0.0.1:8000` o `localhost:8000` y tendrá que salirnos nuestra página.  
+¡Y listo! Ya tenemos configurado nuestro servidor web que muestra la página creada para nuestro CV.
+
+Nota: `static -p 8000` hará que tengamos nuestro servidor ejecutandose en la dirección `http://127.0.0.1:8000` o `localhost:8000`.
+
+## Localhost y Puertos ##
+Ya montamos nuestro servidor web local de desarrollo.
+Para probarlo, en nuestro navegador usamos `localhost:8000`, 8000 fue el número que colocamos en el comando para iniciar el servidor mismo.  
+Localhost se trata de un hostname, un hostname es una etiqueta o un nombre que se le asigna a un dispositivo dentro de la red. Por ejemplo si todas las computadoras están en el mismo wi-fi todos pertenecen a la misma red. Regresando al concepto de localhost este hostname es la etiqueta que se le asigna al dispositivo local, por lo que cuando colocamos localhost en la computadora, estamos conectandonos a la red interna de nuestra computadora que es la que está ejecutando el servidor web.
+El puerto son puntos de entrada por los que se pueden comunicar las aplicaciones que están conectadas en red. Las computadores tienen hasta 65,535 puertos sobre los que se pueden colocar aplicaciones para comunicarse vía la red. Los que van del 0 al 1023 son los que se conocen como puertos del sistema, solo la computadora puede hacer uso de esos puertos. A partir del 1024 en adelante podemos usar los que queremos, aunque pueden haber algunos ocupados.
+Para colocar servidores web, por convención se suelen utilizar los siguientes: 8000, 8080, 3000. 
+En las páginas web sí nos comunicamos vía un puerto (aunque a este no lo ponemos explícitamente), se asume que el puerto es el 80. Es el que se aparta para el protocolo http (el que se usa para conectarse entre el navegador y el servidor web).  
+Si la página usa conexión encriptada (cuando es segura) el puerto es el 443.  
+Hasta este punto, hemos utilizado dos servidores: por una parte node.js y por otra github pages.
+
+## Estructura de Archivos ##
+Definiremos la estructura de organización de nuestros archivos.
+Recordemos que la página inicial siempre se llamará index.html, después crearemos una carpeta llamada assets hace referencia a recursos o elementos que vamos a necesitar para el desarrollo del proyecto.
+
+## Selectores CSS ##
+Existen distintas formas en las que podemos alterar las propiedades CSS de un elemento. La primera de ellas es a través del atributo style de cada elemento. Además vimos los problemas que se presentaban con el uso de la propiedad style para definir la apariencia de nuestros elementos: repetimos código, hacemos que modificar el estilo sea más complejo y hay una dificultad para leer el código.  
+Alternativo al atributo style, podemos escribir código css en archivos externos o dentro de una etiqueta especial de nombre style: `<style></style>` , usualmente se coloca en el head en nuestro documento HTML.  Aquí podemos definir propiedades para múltiples elementos de nuestro sitio web.  
+El primer inconveniente al tratar de mover los estilos a un lugar separado del atributo style de los elementos está en que tenemos que definir que propiedades corresponden a que elemento de nuestra página web, para poder enlazar propiedades a un elemento CSS usamos selectores.  
+Los selectores se verán de la siguiente forma:
+```
+    <style>
+        selector{
+            propiedad: valor;
+        }
+    </style>
+```
+La definición de selectores es muy amplia por lo que veremos los más comúnes, los de nombre, los de clase y los de ID.
+Los de nombre son los más sencillos, colocamos el nombre de la etiqueta y el bloque de las propiedades. Estás propiedades se aplicarán a todos los elementos que pertenecen a esa etiqueta.  
+Veamos un ejemplo de selectores de nombre:  
+```
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <!-- Selector de nombre. -->
+        <style>
+            p{
+              color: red;  
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Hola mundo.
+        </p>
+    </body>
+</html>
+```  
+En un sitio web, no siempre queremos que todos los botones se vean igual, normalmente queremos que tengan distintas distintas propiedades entre grupos y en este caso entran los selectores de clase, y necesitaremos dos cosas:
+1.- Asignarle una clase a algún elemento que queramos estilizar o modificar.
+El nombre que colocaremos dentro de class es arbitrario. `<div class="arbitrario"></div>`.  
+Es importante agregar que cada elemento de nuestro documento puede tener una o más clases. Por ejemplo: `<div class="arbitrario1 arbitrario2"></div>`. Las diferentes clases, como vemos en el ejemplo, se separan utilizando un espacio y se colocan dentro del mismo atributo class. No puede haber más de un atributo class por elemento.
+2.- Para estilizarlos, especificamos propiedades dentro del bloque para esta clase.
+Los selectores de clase se distinguen por tener un punto al inicio del nombre del selector, después sigue el nombre de la clase y por último el bloque correspondiente (los cuales pueden contener múltiples propiedades). Por ejemplo:
+```
+.arbitrario1 {
+    height: 200px;
+    weight: 100px;
+    background-color: red;
+}
+```  
+
+Por último, veremos los selectores de ID. El cual se asigna utilizando el atributo `<div id="arbitrario3"></div>`. La principal diferencia entre el selector por id y el de clase es que es único, no pueden ni deben haber dos elementos con el mismo id, mietras que una misma clase se puede asignar a los elementos que queramos, además un elemento solo puede tener un id, en las clases pueden definirse múltiples para un mismo elemento.  
+Un selector de id en css, se escribira iniciando con un # seguido del id indicado, por ejemplo:  
+```
+#arbitrario3 {
+    background-color: blue;
+}
+```  
+
+## Selectores CSS ##  
+Además de el uso de la etiqueta style, también podemos especificar propiedades de css utilizando archivos externos. Esta es la práctica recomendada. El archivo tendrá la extensión: `.css`. Para enlazar el documento con el HTML tenemos la etiqueta link:  `<link href="./assets/css/main.css" rel="stylesheet">`.
+Para especificar la ruta utilizamos el atributo href, y para especificar la relación que existe entre el documento linkeado y el documento html, utilizamos el atributo rel. Para documentos css siempre el valor del atributo debe ser stylesheet.
+
+## Normalizador CSS ##  
+Los normalizadores son archivos que eliminan los valores por defecto de los elementos. Por eliminar, decimos que los valores asignados se sustituyen por otros que sean iguales en todos los clientes, los valores NO se definen aleatoriamente la comunidad ha estudiado cuales son los adecuados para normalizar los estilos a través de todos los clientes. Han creado archivos que podemos reciclar con los valores por defecto para nuestrto sitio web, una de las librerías populares para esto es [normalize](https://necolas.github.io/normalize.css/) que tiene como objetivo que todos los elementos se muestren de manera concistente.  
+Ahora, para utilizar normalize, haremos lo siguiente:  
+Damos click en el botón download.  
+<img width="564" alt="Captura de Pantalla 2021-03-25 a la(s) 18 48 48" src="https://user-images.githubusercontent.com/41757059/112561544-119ed000-8d9b-11eb-86b9-a58e0fda1133.png">  
+Posteriormente nos saldrá lo siguiente y tendremos dos opciones:  
+La primera opción es importar el archivo usando la dirección en internet (copiando el url).
+La segunda opción es descargarlo, moverlo a nuestro proyecto e importarlo localmente desde nuestra propia computadora.
+La diferencia es que usando la primera opción requerirás de internet por lo que no podrás trabajar en el sitio a menos de que estes conectado a una red wi-fi, por otro lado el segundo enfoque no requiere de internet por lo que tu sitio web funcionaria en tu computadora aunque no estes conectado; usando esta segunda alternativa la página cargará ligeramente más lento.  
+Si cuando desarrollamos tenemos acceso a internet es más recomendable la primera opción.
+<img width="1240" alt="Captura de Pantalla 2021-03-25 a la(s) 18 52 36" src="https://user-images.githubusercontent.com/41757059/112561681-4c086d00-8d9b-11eb-9c6b-9a921171b2f1.png">
+Por último y nos quedaremos con la primera opción ya que es la recomendable y solo bastará poner lo siguiente en nuestro archivo html para poder hacer uso de nuestro normalizador `<link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">`. 
+Es recomendable que para que casi todas las páginas que hagas coloques un normalizador de css.
+
+## Semántica de las etiquetas ##  
+¿Cómo sabemos cuándo elegir una etiqueta? ¿Por qué es importante usarlas adecuadamente?  
+* Etiquetas con controles o widgets: Estas se usan para generar formularios, imágenes, links, audios o video. Tienen un uso perfectamente definido. Por ejemplo la etiqueta img, la etiqueta button, etc.
+* Valor semántico para el sitio: Acarrean un valor semántico por lo que no queda claro cuando se tienen que usar. La semántica no afecta la apariencia de la página pero sí el significado. Por ejemplo section, h1, nav, article....
+¿Para qué darle significado al sitio web? Existen dos tipos de usuario: las personas que pueden deducir el significado del sitio viendolo, por otra parte, están los programas de computadora los cuales también acceden a sitios web y no pueden entender la página porque no la pueden ver, la entieden leyendo las etiquetas y metadatos de nuestro sitio. Los programas que leen sitios web reciben distintos nombres dependiendo de con qué propocito ingresan a la página: crawlers,arañas, scrappers, etc.  Son escenciales para el funcionamiento del internet.
+
+
+## Estructura del documento ##
+Procederemos a definir la estructura de nuestro proyecto.
+En nuestra página web estaremos definiendo un par de etiquetas `<div>`.
+Notemos que uno de nuestros divisores contendrá toda la página, que es al cual le asignamos la clase container como vemos a continuación: 
+` <div class="container"> </div>`.
+Otro de nuestros divisores se encargará de centrar todo el contenido:
+`<div class="content"> </div>`
+Estaremos usando una etiqueta que describe un encabezado, que es `<header> </header>`.
+
+## Tablas ##
+No debes de definir la organización de nuestra página usando tablas, como se hacía antes.
+Las tablas ya no se usan para el esquema de los sitios como se hacían antes. Ahora, tienen un propósito específico: organizar datos en forma de tabla. Usualmente la tabla se conforma de dos elementos: un cuerpo (celdas con datos a mostrar) y un encabezado (descriptores de columnas).  
+Con ayuda de la etiqueta `<thead> </thead>`, haremos el encabezado de nuestra tabla, y con la etiqueta `<th> </th>` haremos los encabezados o descriptores de las columnas.
+Por otra parte, con la ayuda de la etiqueta `<tbody> </tbody>` haremos el cuerpo de nuestra tabla. Ahora, es necesario recordar que las tablas así como están conformadas por columnas, también lo están por filas las cuales representan una nueva entrada (nuevo conjunto de datos) para la tabla.
+Entonces, para declarar una nueva fila usaremos la etiqueta `<tr> </tr>`, y para declarar una celda se declaran con la etiqueta `<td> </td>`. Es necesario agregar que una celdas siempre debe estar contenida en una fila.  
+El número de encabezados definidos debe concordar con el número de celdas que pongamos en cada fila. En caso de que queramos que una celda no tenga información, aún así la colocamos pero vacía, de esa forma de cuadra adecuadamente.  
+Utilizando css haremos un borde (temporal) para nuestra tabla usando lo siguiente:  
+```
+td{
+    border:solid 1px;
+}
+```  
+
+## Iconos ##
+Sirven para añadir información a la página a través de los gráficos o imágenes.
+Para representar la calificación, utilizaremos estrellas.
+Se podrían usar imágenes con fondo transparente, pero más de 6 iconos o imágenes podría hacer más lenta la página.
+Implementaremos una tipografia que tiene iconos en lugar de letras.
+A diferencia de imágenes los caracteres de una tipografia son vectores por lo cual se pueden hacer tan grandes como queramos sin dañar la calidad del gráfico.
+Construir la tipografia te tomaría bastante trabajo pero hay proyectos existentes con iconos que son gratis.
+Por ejemplo:
+El conjunto de iconos de materialize que mantiene google o el que estaremos usando: Font Awesome:
+[Font Awesome](https://fontawesome.com/)).
+La manera en la que pude hacer uso de los iconos fue la siguiente:  
+1.- Accederemos directamente al siguiente link: [Font Awesome Download](https://fontawesome.com/download))
+2.- 
+<img width="1266" alt="Captura de Pantalla 2021-04-05 a la(s) 20 06 52" src="https://user-images.githubusercontent.com/41757059/113644493-7df6ba80-964a-11eb-840b-17f81c555005.png"> Haremos click en " Looking for previous or other versions?"  
+3.- En mi caso descargué la siguiente versión:  
+<img width="1004" alt="Captura de Pantalla 2021-04-05 a la(s) 20 08 57" src="https://user-images.githubusercontent.com/41757059/113644615-c7dfa080-964a-11eb-84a7-9d14ab67074d.png">  
+4.- Por último, haciendo uso de la etiqueta link, lo enlazamos a nuestro archivo .html `<link href="./fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">`.
+
+Una vez hecho el enlace, para hacer uso de los iconos, nos vamos a la ventana iconos que está en la página, encontramos el que se acomode a nuestras necesidades y copiamos el html que nos permitirá hacer uso del icono.
+
+
+## Organización de código ##
+Si volvemos a abrir nuestro archivo de trabajo debería quedar claro que está sucediendo, de modo que las modificaciones puedan hacerse lo más rápido posible.
+El código HTML, CSS, etc... debe cubrir con dos puntos principales: organizado y autodescriptivo. Para lo anterior puedes usar comentarios, identación, entre otras...
+
+## Múltiples documentos HTML ##
+Crearemos una carpeta donde pondremos nuestros nuevos documentos html.
+Aquí colocaremos las páginas para cada uno de los elementos que pusimos en nuestras tablas.
+Para poder ver la página, debemos hacer lo siguiente.
+Por ejemplo...
+localhost:8080/restaurantes/mafalda.html 
+
+# CSS #
