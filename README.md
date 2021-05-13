@@ -677,3 +677,115 @@ Pasos para agregar la animación:
 ## Detalles finales de estilo ##
 
 Se uso padding para crear los espacios en blanco al rededor de los content, mejoró muchisimo la imagen de la página haciendola lucir más elegante.
+
+# Diseño Responsivo #
+
+## Qué es el diseño responsivo ##
+Significa que las páginas web se adaptan al entorno, normalmente al dispositivo en el que se ve el sitio web.  
+En estos tiempos, el diseño responsivo es indispensable.
+
+## Cómo probar el diseño responsivo de tu sitio ##
+La forma más fácil de ver cómo se ve tu sitio en distintos dispositivos es ocupando la herramienta para redimensionar el navegador, usando la consola del navegador.
+
+<img width="1202" alt="Captura de Pantalla 2021-05-13 a la(s) 13 26 05" src="https://user-images.githubusercontent.com/41757059/118169636-cabe7580-b3ee-11eb-9ade-292d14dbaa07.png">
+Notemos que usando la barra de herramientas de dispositivos, se nos muestra con las dimensiones adecuadas por ejemplo, para un celular, un ipad, dependiendo de las opciones que haya o bien puedes editarlo libremente.
+
+Esta herramienta nos da una perspectiva cercana de cómo se puede ver nuestra página en dispositivos mobiles.
+
+
+# El viewport #
+
+El viewport es la parte visible de la página para el usuario.
+
+El comportamiento de el viewport puede controlarse a través del siguiente metadato: `<meta name="viewport">`.
+En este metadato se especifican dos cosas:
+`<meta name="viewport" content="width=device-width">`
+En la propiedad width se define el ancho del viewport, este cambio ya no modifica el tamaño del viewport, ya lo hace igual al tamaño del dispositivo.
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+El initial scale en 1, indica que el zoom inicial será en 1.
+
+El sitio web debe para casi todos los diseños unicamente moverse de arriba a abajo y no debería ser necesario hacer zoom.
+
+# Unidades de Medida #
+
+En CSS existen muchas unidades de medida con las que podemos especificar tamaños, espacios y posiciones, en general podemos dividir las unidades de medida en dos grandes grupos: unidades absolutas o relativas.
+
+
+Las unidades de medida absolutas tienen el mismo valor sin importar en donde se define, que dispositivos este usando, la resolucion de la pantalla y en generla ningun factor externo las altera, podemos decir que son lo que son y punto. No importa el ambiente o el entorno en que las defina.
+Algunos ejemplos de este grupo de unidades son:
+- Pixeles (px)
+- Centímetros (cm)
+- Pulgadas (in)
+- Milimetros (mm)
+- Picas (pc)
+- Puntos (pt)
+
+Por otro lado tenemos el grupo de las unidades de medida relativas que como su nombre lo indica no tienen un valor definido, en cambio el valor final de cada número que asignamos con estas unidades es relativo a distintos factores como la resolución de la pantalla, el tamaño del contenedor, tamaño de la fuente, etc
+Algunos ejemplos de este grupo de unidades son:
+- Porcentajes (%)  
+**Unidad cuyo valor final es relativo al tamaño del contenedor.**
+- EMS (em)
+**Relativos al tamaño de la fuente**, por ejemplo si la fuente mide 12px, 2em serán equivalentes a 24px.
+- EXs(ex)
+**Relativos al alto de la letra x en minúscula.**
+Si esta letra tiene de alto 10px, 2ex serán 20 pixeles.
+- REMs (rem)
+**Relativo al tamaño de la tipografía de TODO el documento.**
+Unidad similar a los EMS, pero con la diferencia de respecto de quién calculan su tamaño, los EMS utilizan la fuente de su contenedor, y los REMs utilizan la fuente de la raíz del documento (i.e., la etiqueta html).
+- VW(vw)
+**Cada unidad es 1% del ancho del viewport.**
+Unidades de medida relativas al viewport.
+Ejemplo, 100 unidades son el 100% del ancho del grupo.
+
+Las más utiles de cada grupo son las siguientes:
+En unidades de medida absoluta normalmente se usan pixeles y rara vez pulgadas, mientras que en unidades relativas usaremos EMS (em), porcentajes y las unidades del viewport.
+
+El mejor consejo que puedes recibir para que tu página se adapte es usar unidades de medida relativas, pues hacen que tu diseño sea flexible en lugar de rigido y hace que se adapte a las distintas resoluciones.
+
+Los EMS (em) son utiles en diseño responsivo porque la fuente no debe ser igual en escritorio que en móbil, las pantallas más pequeñas requieren que el texto sea ligeramente más grande, este cambio puede repercutir en cómo se perciben los paddings o los margenes, si el texto es más grande y los espacios en blanco se quedan igual, se pierde el diseño por eso es mejor especificar ciertos valores relativos a la fuente, de modo que si incrementamos la fuente, estos valores también se incrementarán.
+
+# Overflow y Unidades Relativas #
+Overflow propiedad que define cómo se comporta el contenido que se sale de las dimensiones del elemento.
+Estas son las dimensiones máximas del elemento:
+```
+max-width: 960px;
+max-height: 500px;
+```
+Y cuando el contenido pasa estas dimensiones por defecto lo que se hace es mostrarlos aunque esten fuera del contenido (por ejemplo el texto).
+Si usamos:
+```
+overflow: ;
+```
+Podemos darle el valor de hidden, pero no se verá, otra forma es que haya scroll, y nos dará las barras que le pertenecen al elemento mismo y no al cuerpo de la página.
+Otra alternativa es hacer overflow sobre una de las dimensiones por ejemplo:
+```
+overflow-y: scroll;
+overflow-x: hidden;
+```
+Con esto ya no podriamos movernos hacia los lados, pero sí hacía abajo.
+
+# Media Queries #
+A veces el diseño fluido no es suficiente y debemos hacer ciertas modificaciones especificas para ciertas resoluciones.
+
+Para poder especificar valores de CSS dependiendo del tipo de pantalla en donde estamos se crearon las media queries, estas nos permiten especificar una serie de propiedades que solo se aplicarán si una condición se cumple: tipo de pantalla, tamaño o capacidades del dispositivo.
+
+Para especificar una media queri se usa la regla: `@media` seguido de las condiciones que debe de cumplir.
+Por ejemplo:
+```
+@media (max-width: 500px){}
+```
+La anterior es un ejemplo de una media query cuyas propiedades especifcadas unicamente se aplicaran para pantallas con ancho maximo de 500px.
+
+
+# Mobile First #
+Desde el 2016 son más los usuarios que acceden a internet via celulares que los que lo hacen a través de computadoras.
+Actualmente más del 50% de personas accede a internet a telefonos, 4% tabletas y el resto, computadoras.
+
+Mobile First es un concepto que agrupa distintas estretegias que agrupa diseño, rendimiento, capacidades de hardware.
+En lo que respecta al diseño, el primer paso para mobile first es que las medias querys esten diseñados para los dispositivos más capaces y grandes y no para los menos.
+
+Tu hoja de estilos original debe estar diseñada para las pantallas chicas y después con media queries adaptarla a pantallas grandes.
+
+Mobile first no solo son media queries hechas al revés, son muchas más cosas. 
+
+Lo que hay que tener en mente de este tema, es que el diseño inicialmente se hace para las pantallas o los dispositivos con menos capacidades y progresivamente para los que ofrecen mejor rendimiento, pantallas más anchas, mejor equipo, entre otras.
