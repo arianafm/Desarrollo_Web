@@ -1,3 +1,140 @@
-td{
-    border:solid 1px;
+/*
+Cinnamon Satin: 189, 99, 126
+Baby Pink: 226, 180, 183
+Floral White: 254, 248, 236
+Opal: 160, 201, 195
+Steel Teal: 101, 125, 129
+#f7eeed
+#eac4d5
+*/
+
+/* html: Se aplica a todo el sitio web */
+html{
+  font-family: 'Nunito', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(189, 99, 126);
+}
+
+.title{
+  text-transform: uppercase; /*Todas en mayúscula*/
+  text-align: center;
+}
+
+.subtitle{
+  text-transform: uppercase; /*Todas en mayúscula*/
+  letter-spacing: 2.5px;
+}
+
+.paragraph{
+  line-height: 1.8em;
+  font-weight: 200;
+
+}
+
+/* Selector de clase empieza con punto*/
+.container{
+    background: #E2B4B7;/* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d9a7c7, #fffcdc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d9a7c7, #fffcdc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh; /*Si la medida fuera en %, depende del padre de nuestro nodo (en este caso body) por lo que estaría diciendo todo el alto de body*/
+    display: flex; /*Elementos dentro del contenedor adoptan su posición usando como herramienta de posicionamiento y de layout flexbox */
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+  max-width: 960px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  /* box-shadow: diferenciaHorizontal diferenciaVertical desenfoque amplitud color; */
+  /* Ejemplo 1: box-shadow: 0 3px 6px 2.5px rgb( 254, 248, 236); */
+  /* Sombra realista */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  /* border-radius: 4px;*/
+  position: relative; /* Elemento posicionado */
+  padding: 1.8em; /*Espacio a los lados*/
+}
+
+.actions{
+  position: absolute; /* Las medidas que pongamos sean relativas a content por eso lo marcamos como elemento posicionado*/
+  top: 1em;
+  right: 1em;
+}
+
+.close{
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: #eac4d5;
+  display: inline-block; /* Asigna tamaño correspondiente*/
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-weight: 300;
+  cursor: pointer; /*Cambia el cursor a un dedito*/
+  /* Para centrar la x:*/
+  display: flex; 
+  align-items: center; /* Centra horizontal*/
+  justify-content: center; /* Centra vertical*/
+}
+
+
+.table{
+  width: 100%;
+  border-spacing: 0;
+}
+
+/* Para que las propiedades se apliquen a ambas celdas se coloca el sig selector*/
+/* Celdas cuerpo, celdas encabezado*/
+.table td, .table th{
+  padding: 1em;
+  text-align: left;
+}
+
+/*Pseudo-Clase: Definimos una forma en la que seleccionaremos el elemento n de tr con
+respecto al padre table.*/
+.table tr:nth-child(even){
+  background-color: #fae6e7;
+}
+
+.fa-star{
+  color: rgb(189, 99, 126);
+}
+
+
+
+.title-item{
+  font-size: 2em;
+  /* border-bottom-style: solid;
+  border-width: 2.5px;
+  border-color: #eac4d5; */
+  /* Lo de arriba se puede suplantar usando Shorthand Properties de la sig manera: */
+  border-bottom: solid 2.5px #eac4d5;
+  padding-bottom: 1em;
+}
+
+.position{
+  background: #eac4d5;
+  color: white;
+  padding: 10px;
+  border-radius: 30px 60px;
+  margin-right: 0.2em;
+}
+
+.address{
+  font-weight: bold;
+  color:  #eac4d5;
+  font-size: 1.2em;
+  font-weight: 75;
+
+}
+
+.main-image{
+  float: left;
+  margin-right: 1em;
+  height: 250px;
 }

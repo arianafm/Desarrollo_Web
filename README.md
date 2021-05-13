@@ -517,3 +517,163 @@ Por ejemplo...
 localhost:8080/restaurantes/mafalda.html 
 
 # CSS #
+
+## Colores y fondos ##
+Es importante saber que los colores son importantes para un buen diseño web, por eso, se suelen usar paletas de colores.
+Algunas de las páginas donde podrás encontrar paletas de colores son las siguientes:
+[https://material.io/](https://material.io/)
+[https://www.materialpalette.com/](https://www.materialpalette.com/)
+[https://flatuicolors.com/](https://flatuicolors.com/)
+[https://color.adobe.com/es/create](https://color.adobe.com/es/create)
+[https://coolors.co/](https://coolors.co/)
+
+Una vez satisfecho con la colección de tus colores, en la hoja de estilos anotaremos en forma de comentarios los colores que tenemos, así los podemos tener como referencia.  
+Ahora, es importante remarcar que también podemos usar degradados y tiene su propia sintaxis.
+Página donde podrás encontrar degradados:
+[https://uigradients.com/#CheerUpEmoKid](https://uigradients.com/#CheerUpEmoKid)
+[https://webgradients.com/](https://webgradients.com/)
+
+## Compatibilidad entre navegadores ##
+Para que los degradados, sombras, animaciones se integren a un navegador se siguen una serie de pasos.
+La "w3.org" detalla cómo debe funcionar esta novedad, propiedades y etiquetas nuevas de cómo se configurará.
+Link:[https://www.w3.org/TR/css-images-3/](https://www.w3.org/TR/css-images-3/)
+Cada navegador prioriza distintas funcionalidades de distinta manera, esto se traduce en que las funcionalidades más modernas pueden o no funcionar en distintos navegadores.
+Estas complicaciones deben ser resueltas de manera que tu página utilice y aproveche la tecnologia más moderna sin comprometer la funcionalidad de la página para usuarios que utilicen navegadores más viejos o que no hayan implementado esa funcionalidad.
+Para esto, los desarrolladores han diseñado e implementado distintas estretegias, por ejemplo: progressive enhancement.
+Progressive Enhancement: En esta estretegia se prioriza el contenido, i.e., el proposito original de la páginas e pueda ver ignorando las novedades de la tecnologia, animaciones, colores, degradados, etc...
+´´´
+.container{
+    background: #E2B4B7;/* Respaldp */
+    background: -webkit-linear-gradient(to right, #d9a7c7, #fffcdc); 
+    background: linear-gradient(to right, #d9a7c7, #fffcdc); 
+}
+´´´
+Utilizando el respaldo, de alguna manera seguimos la estrategia antes mencionada.
+
+La mayoría de los navegadores reconocen el degradado.
+
+La mejora progresiva se ve reflejada en que primero colocamos un fondo sólido que cualquier navegador pudiera entender, y después los degradados. Para esto es importante recalcar que CSS está diseñado de tal forma en que si no entiende una propiedad, la ignora, es por eso que funciona.
+
+Hacer una página que funcione para todos los usuarios implica tomar decisiones como: implica implementar algo muy nuevo o si vale la pena que tu sitio funcione en navegadores de hace 10 años.
+
+Revisa que tu página funcione en:
+Safari, firefox, chrome, edge, safari para ios, navegador de android, internet explorer (Versión 11).
+
+Aunque podríamos probar nuestra página en los distintos navegadores antes mencionados también hay una herramienta que nos permite hacerlo: 
+[https://caniuse.com/](https://caniuse.com/)
+En esta página, se espefica el soporte de navegadores a las distintas funcionalidades que se pueden utilizar en un sitio web.
+
+
+## Posicionamiento ##
+Hay una gran cantidad de layouts y estructuras que podemos encontrar en la web además del enorme número de dispositivos con pantallas de distintos tamaños que acceden al internet todos los días, para cubrir estos millones de casos teníamos que tener una herramienta muy flexible, fácil de mantener, etc.
+Antes se ordenaba todo con tablas, hasta la funcionalidades más modernas como css grid, etc.
+Eventualmente, significó que existen muchas formas a tráves de las cuales podemos colocar un elemento en la posición que nosotros queramos, generalmente no hay una solución única y lo que nos queda es aprender las alternativas para decidir cuál se adapta mejor a nuestras alternativas.
+Para centrar un elemento horizontal y verticalmente, haremos lo siguiente:
+En caso de que queramos obtener el valor de toda la pantalla, podemos usar las unidades de medida en vh. Para el caso de height podemos usar 100vh para el alto total de la pantalla, por ejemplo 50vh sería la mitad.
+
+Juego para aprender flexbox
+[https://flexboxfroggy.com/#es](https://flexboxfroggy.com/#es)
+
+## Fuentes personalizadas ##
+La propiedad @font-face permite al autor especificar fuentes online para visualizar en sus páginas web. Para más información, podemos entrar al siguiente link: [https://developer.mozilla.org/es/docs/Web/CSS/@font-face](https://developer.mozilla.org/es/docs/Web/CSS/@font-face)
+Podemos usar google fonts con la finalidad de encontrar distintos tipos de letras: [https://fonts.google.com/](https://fonts.google.com/)
+Damos click en el estilo de letra que nos haya gustado, lo seleccionamos, vemos las familias que hemos seleccionado y copiamos el link y el nombre de la fuente en el archivo html y css, respectivamente.
+
+## Modificadores de texto ##
+Hay propiedades que afectan como se ve el texto en pantalla. Por ejemplo: text-decoration, text-transform, line-height, entre otros.
+
+## Estilizar tablas ##
+Pseudo-Clases: Se usan para definir propiedades para un elemento cuando se encuentra en un
+estado en especifico, por ejemplo: cuando el mouse está encima del elemento, elemento activo, etc.
+La pseudo-clase que utilizamos para el efecto que queriamos aplicar en este vídeo en particular se
+llama "nth-child" esta pseudo-clase nos permite seleccionar vía un número o una fórmula a los hijos
+de un padre.
+Se define como sigue en css:
+´´´
+.table tr:nth-child(){
+}
+´´´
+
+## Bordes y sombras ##
+Hay distintas propiedades para bordes y sombras, un ejemplo de sombra realista puede ser el siguiente:
+´´´
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+´´´
+Para bordes, podemos revisar la siguiente página donde tenemos múltiples ejemplos:
+[https://www.w3schools.com/css/css_border.asp](https://www.w3schools.com/css/css_border.asp)
+
+## Shorthand Properties ##
+Permiten especificar el valor de múltiples propiedades pero en una sola declaración, existen shorthand properties para muchos grupos de propiedades: los borders, los paddings, la tipografia, entre otros.
+Estas propiedades pueden tener uno, dos o cuatro valores.
+Para un padding o margenes, sería como sigue: 
+padding: arriba derecha abajo izquierda 4
+padding: arriba/abajo derecha/izquierda 2
+padding: aplicable a todos los lados    1
+
+## Especificidad en CSS ##
+Al término que usamos para saber qué declaración debe aplicarse por sobre de otras a un elemento en css, se le llama especificidad. La especificidad es un peso que se le asigna a una declaración, entre mayor el peso más alta es la precedencia para que las propiedades se apliquen al elemento. La precedencia es el orden en qué el navegador decidirá que declaración aplicar.
+
+![IMG_3932](https://user-images.githubusercontent.com/41757059/116766121-6bc03000-a9ee-11eb-84f5-36bf963980d0.jpg)
+
+En el ejemplo anterior, la especificidad sería como sigue:
+La de mayor peso es div.content, después .content y después aplicaría div.
+
+Para definir la especificidad de una declaración se toman en cuenta múltiples argumentos, comencemos por los de orden jerárquico más alto.   
+Los estilos declarados vía el atributo style tienen el peso más alto.
+Si cambiaramos ` HTML: <div class = "content" style="background-color:pink;"></div>`, entonces el atributo style tendría mayor precedencia y se cambiaría el background a rosa.
+
+La única forma en que un selector puede sobreecribir el atributo style es vía el uso de la regla important, esta regla se aplica cuando sobre la declaración de una propiedad se coloca la etiqueta `!important` al final, indicando que esta declaración debe sobreecribir a todas las demás. 
+
+Aunque `!important` puede sacarte de algún apuro, es una mala práctica.
+el orden jerárquico queda de la siguiente manera:
+1.- `!important`
+2.- Atributo style.
+
+Ahora, volvamos al ejemplo principal.  
+En lo que respecta a los selectores, la precedencia se define de la siguiente manera:  
+1.- Selectores por id (peso más alto).  
+2.- Selectores de clase, atributos y pseudo clases.  
+3.- Selectores de tipo y pseudo elementos (peso más bajo).  
+
+
+Ejemplo de selector por id:  
+
+![IMG_97AF05069B0B-1](https://user-images.githubusercontent.com/41757059/118073834-49c19880-b372-11eb-8da3-670d033042c5.jpeg)
+
+Ahora, es necesario saber que entre más especifico sea el selector tomará más peso.
+Por ejemplo si tuvieramos ` CSS: #div.content {background-color: purple}`, este sería el de mayor peso.
+
+## Posiciones (absolute, fixed, relative) en CSS ##
+
+Una de las propiedades que nos permite alterar el lugar en el que aparece un elemento es con la propiedad position, misma que define como un elemento debera ser colocado o posicionado en la página web.
+
+Position no define en donde aparecerá sino cómo las posiciones o dimensiones especificadas en top, right, left y button afectaran el lugar en el que se posicionará el elemento.
+
+Los valores para position son los siguientes:
+static, relative, absolute, fixed, sticky.
+
+Todos los elementos cuando los creamos desde el inicio empiezan con el valor static en la propiedad position, se dice que estos elementos no estan posicionados, ya que su posicion no se altera en lo más minimo por los valores top, left, right y button.
+
+El valor más simple es relative, pues modificará al elemento usando las propiedades indicadas tomando como origen la posicion en la que de por si se encuentra, este movimiento se hizo a partir de la posicion donde ya estaba.
+
+Si asignamos como valor fixed, la posicion cambia por completo, las propiedades especificadas se añaden de manera relativa al viewport, es decir que no importa donde este originalmente el elemento, se colocara relativo a la pantalla, y además no se verá afectado por el scroll.
+
+Si asignamos el valor como absolute, la posicion es relativa al contenedor más cercano al que este posicionado (No hay ningún div arriba de div cuyo positon sea diferente de static), si no hay, es relativo al viewport pero este sí se ve afectado por el scroll.
+
+En caso de asignar el valor sticky, es un valor especial que intercambia los valores del elemento entre relative y fixed dependiendo de si el elemento se sale del viewport por el scroll.
+
+## Animaciones ##
+
+Las animaciones en css son faciles de definir, modificar y son eficientes.
+Para crear una animación primero tenemos que especificar los keyframes. En una animación como esta únicamente definimos puntos clave de la animación o fotogramas clave, luego CSS se encarga de rellenar los fotogramas necesarios para pasar de uno a otro.
+
+Para nuestro proyecto recurriremos a una libreria con animaciones predefinidas.
+[https://animate.style/](https://animate.style/)
+
+Pasos para agregar la animación:
+![IMG_6DE99E7371CD-1](https://user-images.githubusercontent.com/41757059/118079677-3a484c80-b37e-11eb-8331-e0cc44fc96d7.jpeg)
+
+
+## Detalles finales de estilo ##
+
+Se uso padding para crear los espacios en blanco al rededor de los content, mejoró muchisimo la imagen de la página haciendola lucir más elegante.

@@ -7,19 +7,29 @@
         <!-- Colocamos los dos puntos para estar a un nivel superior en nuestras carpetas -->
         <link href="../fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
         <link href="../assets/css/main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body>
         <div class="container">
-            <div class="content">
+            <div class="content animate__animated animate__fadeInDown">
+                <div class="actions">
+                    <a href="../" class="close">
+                    <!-- Para que este botón sirva correctamente es necesario tener el servidor web corriendo. -->
+                    <span> X</span>
+                    </a>
+                </div>
                 <header>
-                    <h2>Mafalda</h2>
+                    <h2 class="title-item">
+                        <span class="position">1</span> 
+                        Mafalda
+                    </h2>
                 </header>
                 <section>
-                    <img src="" alt="">
+                    <img src="../assets/images/mafalda.jpg"  class="main-image" alt="Mafalda" >
                     <div class="text">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <address>Av Miguel Hidalgo 2, San Lucas, Coyoacán, 04030 Ciudad de México, CDMX</address>
-                        <p>
+                        <address class="address"> <i class="fas fa-map-marker-alt"></i> Av Miguel Hidalgo 2, San Lucas, Coyoacán, 04030 Ciudad de México, CDMX</address>
+                        <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu leo in nulla posuere 
                             fermentum. Aliquam nisl ipsum, ullamcorper id nibh in, efficitur tincidunt ligula. 
                             Praesent turpis libero, blandit nec molestie eu, bibendum eu libero. Sed vel lacus non 
