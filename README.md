@@ -1164,3 +1164,8 @@ Aprendimos:
 
 ## Despedida del curso ##
 Ahora ya tienes los fundamentos para crear páginas web por tu cuenta, hoy en día en desarrollo web tenemos conceptos como las aplicaciones web progresivas, tenemos muchos frameworks de JS como react, angular, view, etc...
+
+# Certificado #
+![certificado](https://user-images.githubusercontent.com/41757059/118324936-548e4180-b4c8-11eb-8bb7-cfef6af180ce.png)
+
+
