@@ -1133,3 +1133,34 @@ Incluso si abandonas durante meses tu código, al regresar debe poder ser entend
 Subimos nuestro proyecto a github.
 
 Nota: Vaciar el caché evita que el navegador guarde versiones viejas de la página.
+
+# Despedida #
+
+## Recapitulación del segundo proyecto ##
+
+¿Qué aprendimos en el proyecto "boletines"?  
+Aprendimos:
+- Como montar un servidor local en nuestra computadora, como acceder con localhost.
+- Aprendimos CSS desde archivos externos.
+- Varios tipos de selectores y su importancia.
+- Necesidad de normalizadores CSS que quitan estilos que los distintos navegadores agregan a ciertos elementos de nuestra página web.
+- Importantancia de utilizar apropiadamente las etiquetas HTML para darle sentido a nuestra página.
+- Como colocar tablas, iconos, imagenes, fuentes personalizadas, etc
+- Agregar más de una página a el proyecto.
+- Movernos entre páginas.
+- Cualidades de CSS (colores y fondos, degradado, compatibilidad de navegadores, posicionadores, modificar texto, etc)
+- Estilizar nuestra tabla
+- Shorthand properties.
+- Especificidad.
+- Posicionamiento de elementos.
+- Animaciones.
+- Pseudo selectores.
+- Mobile First.
+- Entre otras.
+
+## Qué cursos tomar a continuación ##
+
+[http://codigofacilito.com/especialidades/desarrollador-frontend](http://codigofacilito.com/especialidades/desarrollador-frontend)
+
+## Despedida del curso ##
+Ahora ya tienes los fundamentos para crear páginas web por tu cuenta, hoy en día en desarrollo web tenemos conceptos como las aplicaciones web progresivas, tenemos muchos frameworks de JS como react, angular, view, etc...
