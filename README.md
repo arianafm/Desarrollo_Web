@@ -826,7 +826,7 @@ Pasos para agregar la animación usando animate.css:
  Esta herramienta nos da una perspectiva cercana de cómo se puede ver nuestra página en dispositivos móviles.
 
 
- # El viewport #
+ ## El viewport ##
 
  El viewport es la parte visible de la página para el usuario.
 
@@ -840,7 +840,7 @@ Pasos para agregar la animación usando animate.css:
 
  El sitio web debe para casi todos los diseños unicamente moverse de arriba a abajo y no debería ser necesario hacer zoom.
 
- # Unidades de Medida #
+ ## Unidades de Medida ##
 
  En CSS existen muchas unidades de medida con las que podemos especificar tamaños, espacios y posiciones, en general podemos dividir las unidades de medida en dos grandes grupos: unidades absolutas o relativas.
 
@@ -879,7 +879,7 @@ Pasos para agregar la animación usando animate.css:
 
  Los EMS (em) son útiles en diseño responsivo porque la fuente no debe ser igual en escritorio que en móvil, las pantallas más pequeñas requieren que el texto sea ligeramente más grande, este cambio puede repercutir en cómo se perciben los paddings o los margenes, si el texto es más grande y los espacios en blanco se quedan igual, se pierde el diseño por eso es mejor especificar ciertos valores relativos a la fuente, de modo que si incrementamos la fuente, estos valores también se incrementarán.
 
- # Overflow y Unidades Relativas #
+ ## Overflow y Unidades Relativas ##
  Overflow propiedad que define cómo se comporta el contenido que se sale de las dimensiones del elemento. 
 
  Estas son las dimensiones máximas del elemento:
@@ -908,7 +908,7 @@ Pasos para agregar la animación usando animate.css:
 
  Con esto ya no podríamos movernos hacia los lados, pero sí hacía abajo.
 
- # Media Queries #
+ ## Media Queries ##
  A veces el diseño fluido no es suficiente y debemos hacer ciertas modificaciones especificas para ciertas resoluciones.
 
  Para poder especificar valores de CSS dependiendo del tipo de pantalla en donde estamos se crearon las media queries, estas nos permiten especificar una serie de propiedades que solo se aplicarán si una condición se cumple: tipo de pantalla, tamaño o capacidades del dispositivo.
@@ -924,7 +924,7 @@ Pasos para agregar la animación usando animate.css:
  La anterior es un ejemplo cuyas propiedades especifcadas unicamente se aplicaran para pantallas con ancho máximo de 500px.
 
 
- # Mobile First #
+ ## Mobile First ##
  Desde el 2016 son más los usuarios que acceden a internet vía celulares que los que lo hacen a través de computadoras.   
  
  Actualmente más del 50% de personas accede a internet a telefonos, 4% tabletas y el resto, computadoras.  
