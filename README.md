@@ -698,17 +698,17 @@ Otros metadatos importantes son los de el protocolo open graph (este protocolo d
  de un padre.
 
  Se define como sigue en css:
- ´´´
+ ```
  .table tr:nth-child(){
  }
- ´´´
+ ```
 
  ## Bordes y sombras ##
  Hay distintas propiedades para bordes y sombras, un ejemplo de sombra realista puede ser el siguiente:
  
- ´´´
+ ```
  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
- ´´´
+ ```
  
  Para bordes, podemos revisar la siguiente página donde tenemos múltiples ejemplos:
  [https://www.w3schools.com/css/css_border.asp](https://www.w3schools.com/css/css_border.asp)
@@ -845,6 +845,7 @@ Pasos para agregar la animación usando animate.css:
  En CSS existen muchas unidades de medida con las que podemos especificar tamaños, espacios y posiciones, en general podemos dividir las unidades de medida en dos grandes grupos: unidades absolutas o relativas.
 
  Las **unidades de medida absolutas** tienen el mismo valor sin importar en donde se define, que dispositivos este usando, la resolucion de la pantalla y en generla ningún factor externo las altera, podemos decir que son lo que son y punto. No importa el ambiente o el entorno en que las defina.
+ 
  Algunos ejemplos de este grupo de unidades son:
  * Pixeles (px)
  * Centímetros (cm)
@@ -853,7 +854,8 @@ Pasos para agregar la animación usando animate.css:
  * Picas (pc)
  * Puntos (pt)
 
- Por otro lado tenemos el grupo de las **unidades de medida relativas** que como su nombre lo indica no tienen un valor definido, en cambio el valor final de cada número que asignamos con estas unidades es relativo a distintos factores como la resolución de la pantalla, el tamaño del contenedor, tamaño de la fuente, etc.  
+ Por otro lado tenemos el grupo de las **unidades de medida relativas** que como su nombre lo indica no tienen un valor definido, en cambio el valor final de cada número que asignamos con estas unidades es relativo a distintos factores como la resolución de la pantalla, el tamaño del contenedor, tamaño de la fuente, etc. 
+ 
  Algunos ejemplos de este grupo de unidades son:  
  * Porcentajes (%)  
  **Unidad cuyo valor final es relativo al tamaño del contenedor.**  
@@ -911,7 +913,7 @@ Pasos para agregar la animación usando animate.css:
 
  Para poder especificar valores de CSS dependiendo del tipo de pantalla en donde estamos se crearon las media queries, estas nos permiten especificar una serie de propiedades que solo se aplicarán si una condición se cumple: tipo de pantalla, tamaño o capacidades del dispositivo.
 
- Para especificar una media queri se usa la regla: `@media` seguido de las condiciones que debe de cumplir.
+ Para especificar una, se usa la regla: `@media` seguido de las condiciones que debe de cumplir.
 
  Por ejemplo:  
 
@@ -919,15 +921,16 @@ Pasos para agregar la animación usando animate.css:
  @media (max-width: 500px){}
  ```
 
- La anterior es un ejemplo de una media query cuyas propiedades especifcadas unicamente se aplicaran para pantallas con ancho maximo de 500px.
+ La anterior es un ejemplo cuyas propiedades especifcadas unicamente se aplicaran para pantallas con ancho máximo de 500px.
 
 
  # Mobile First #
- Desde el 2016 son más los usuarios que acceden a internet via celulares que los que lo hacen a través de computadoras.   
+ Desde el 2016 son más los usuarios que acceden a internet vía celulares que los que lo hacen a través de computadoras.   
+ 
  Actualmente más del 50% de personas accede a internet a telefonos, 4% tabletas y el resto, computadoras.  
 
  Mobile First es un concepto que agrupa distintas estretegias que agrupa diseño, rendimiento, capacidades de hardware.   
- En lo que respecta al diseño, el primer paso para mobile first es que las medias querys esten diseñados para los dispositivos más capaces y grandes y no para los menos.  
+ En lo que respecta al diseño, el primer paso para mobile first es que las media queries esten diseñados para los dispositivos más capaces y grandes y no para los menos.  
 
  Tu hoja de estilos original debe estar diseñada para las pantallas chicas y después con media queries adaptarla a pantallas grandes.
 
@@ -938,377 +941,375 @@ Pasos para agregar la animación usando animate.css:
 
 # JavaScript #
 
-## Qué es JavaScript ##
+ ## Qué es JavaScript ##
 
-### Desarrollo Web Profesional
+ ### Desarrollo Web Profesional
 
-JavaScript es un lenguaje de programación, con el que podemos escribir código para resolver una gran variedad de tareas. Este lenguaje tiene varias características que iremos destacando a continuación.
+ JavaScript es un lenguaje de programación, con el que podemos escribir código para resolver una gran variedad de tareas. Este lenguaje tiene varias características que iremos destacando a continuación.
 
-Primero, es multi plataforma, existen lenguajes que sólo se pueden ejecutar en un entorno específico, por ejemplo, sólo funciona en Mac, o sólo funcionan en teléfonos, etc. Cuando un lenguaje funciona en más de un entorno, lo llamamos multi plataforma, en el caso de JavaScript, los programas escritos en este lenguaje pueden ejecutarse usando un navegador, en una computadora con NodeJs, en robots, en drones, en teléfonos, etc. etc.
+ Primero, es multi plataforma, existen lenguajes que sólo se pueden ejecutar en un entorno específico, por ejemplo, sólo funciona en Mac, o sólo funcionan en teléfonos, etc. Cuando un lenguaje funciona en más de un entorno, lo llamamos multi plataforma, en el caso de JavaScript, los programas escritos en este lenguaje pueden ejecutarse usando un navegador, en una computadora con NodeJs, en robots, en drones, en teléfonos, etc. etc.
 
-El lenguaje es tan diverso que se ha convertido en quizás el lenguaje de programación más popular en la actualidad, porque precisamente se usa en múltiples áreas de distintas industrias para resolver un sin fin de problemas.
+ El lenguaje es tan diverso que se ha convertido en quizás el lenguaje de programación más popular en la actualidad, porque precisamente se usa en múltiples áreas de distintas industrias para resolver un sin fin de problemas.
 
-JavaScript no siempre fue lo que es hoy, sus inicios se remontan a los años 90, cuando Netscape desarrolló el lenguaje exclusivamente para ejecutarse en un navegador, con el propósito de realizar sitios dinámicos que pudieran, a través de un script de programación, interactuar con el usuario.
+ JavaScript no siempre fue lo que es hoy, sus inicios se remontan a los años 90, cuando Netscape desarrolló el lenguaje exclusivamente para ejecutarse en un navegador, con el propósito de realizar sitios dinámicos que pudieran, a través de un script de programación, interactuar con el usuario.
 
-Hoy, la mayoría de las páginas usan JavaScript para infinidad de propósitos distintos, desde controlar un menú, actualizar el sitio, cargar datos, ejecutar acciones dependiendo de la interacción del usuario con el sitio, mostrar anuncios, reproducir vídeos y muchísimo más.
+ Hoy, la mayoría de las páginas usan JavaScript para infinidad de propósitos distintos, desde controlar un menú, actualizar el sitio, cargar datos, ejecutar acciones dependiendo de la interacción del usuario con el sitio, mostrar anuncios, reproducir vídeos y muchísimo más.
 
 
-Ahora, veamos algunas características técnicas del lenguaje:
+ Ahora, veamos algunas características técnicas del lenguaje:
 
-JavaScript es un lenguaje interpretado, lo que quiere decir que para ejecutar el código existe otro programa llamado intérprete.
-Recordemos que el intérprete se encarga de leer línea por línea el código en tiempo de ejecución (i.e., cuando se ejecuta el programa, empieza la lectura y la interpretación).
+ JavaScript es un lenguaje interpretado, lo que quiere decir que para ejecutar el código existe otro programa llamado intérprete.
+ Recordemos que el intérprete se encarga de leer línea por línea el código en tiempo de ejecución (i.e., cuando se ejecuta el programa, empieza la lectura y la interpretación).
 
-Los lenguajes compilados como Java o C requieren de el compilador, a diferencia del interprete lee todo el programa en tiempo de compilación.
+ Los lenguajes compilados como Java o C requieren de el compilador, a diferencia del interprete lee todo el programa en tiempo de compilación.
 
-En términos prácticos que JS sea interpretado, quiere decir que si tienes un error en alguna linea nunca lo sabrá hasta que el interprete llegue a dicha linea al momento de ejecutar el programa.
+ En términos prácticos que JS sea interpretado, quiere decir que si tienes un error en alguna linea nunca lo sabrá hasta que el interprete llegue a dicha linea al momento de ejecutar el programa.
 
-Por otro lado, el compilador puede decir estos errores antes de la ejecución.
+ Por otro lado, el compilador puede decir estos errores antes de la ejecución.
 
-Veamos el siguiente código:
-```javascript
-//Imprime mi nombre.
-let nombre = 'Uriel';
-console.log(nombre);
-consle.loj();
-```
+ Veamos el siguiente código:
 
-En el ejemplo anterior el intérprete leería línea por línea el código y no se enteraría del error hasta llegar a la línea: `consle.loj();`. Es decir, las primeras dos líneas se ejecutarían sin problema, por otro lado en el caso de los compilados, el programa no se ejecutaría pues antes de la ejecución (es decir en compilación, se regresaría el error).
+ ```javascript
+ //Imprime mi nombre.
+ let nombre = 'Uriel';
+ console.log(nombre);
+ consle.loj();
+ ```
 
-Una ventaja de un lenguaje interpretado es que no tienes que preocuparte por compilar tu archivo.
+ En el ejemplo anterior el intérprete leería línea por línea el código y no se enteraría del error hasta llegar a la línea: `consle.loj();`. Es decir, las primeras dos líneas se ejecutarían sin problema, por otro lado en el caso de los compilados, el programa no se ejecutaría pues antes de la ejecución (es decir en compilación, se regresaría el error).
 
-Además es importante saber que JavaScript es un lenguaje débilmente y dinámicamente tipado. Tipado hace referencia a las variables, una variable puede o no tener un tipo. Esta característica de las variables separa los lenguajes entre aquellos que son tipados y los que no son tipados.
+ Una ventaja de un lenguaje interpretado es que no tienes que preocuparte por compilar tu archivo.
 
-```java
-//Java
-int edad = 24;
-```
+ Además es importante saber que JavaScript es un lenguaje débilmente y dinámicamente tipado. Tipado hace referencia a las variables, una variable puede o no tener un tipo. Esta característica de las variables separa los lenguajes entre aquellos que son tipados y los que no son tipados.
 
-```javascript
-//JavaScript
-let edad = 24;
-```
-Ahora, revisemos los ejemplos anteriores, notemos que en el primer caso usamos java, ahí claramente se ve el tipo especificado, en este caso _int_ (entero). En el caso de JS no vemos un tipo especificado, es una palabra reservada del lenguaje, se utiliza en todas las variables, no especifica un tipo.
+ ```java
+ //Java
+ int edad = 24;
+ ```
 
-¿Por qué sucede eso?
+ ```javascript
+ //JavaScript
+ let edad = 24;
+ ```
+ Ahora, revisemos los ejemplos anteriores, notemos que en el primer caso usamos java, ahí claramente se ve el tipo especificado, en este caso _int_ (entero). En el caso de JS no vemos un tipo especificado, es una palabra reservada del lenguaje, se utiliza en todas las variables, no especifica un tipo.
 
-JS es de tipado dinámico, esto quiere decir que el intérprete intentara asignarle un tipo a la variable de manera dinámica, dependiendo del valor que queramos guardar en la variable. En este caso, el intérprete le asignaría el tipo number que se usa precisamente para los tipos en JS.
+ ¿Por qué sucede eso?
 
-Ahora, gracias a que JS es de tipado dinámico podemos reciclar la misma variable para guardar números, luego cadenas, o lo que queramos, pues la variable nunca conservará un tipo fijo para los datos que almacena.
+ JS es de tipado dinámico, esto quiere decir que el intérprete intentara asignarle un tipo a la variable de manera dinámica, dependiendo del valor que queramos guardar en la variable. En este caso, el intérprete le asignaría el tipo number que se usa precisamente para los tipos en JS.
 
-Deducimos que JS es de tipado débil, y esto usualmente hace referencia a que el compilador o el intérprete no evaluan el tipo de dato hasta que el programa se encuentra en ejecución. Así, si nos topamos con un caso en el que JS espere que la variable sea de un tipo, no lo sabremos hasta que el programa llegue a ese punto de ejecución.
+ Ahora, gracias a que JS es de tipado dinámico podemos reciclar la misma variable para guardar números, luego cadenas, o lo que queramos, pues la variable nunca conservará un tipo fijo para los datos que almacena.
 
-En general, si el compilador o intérprete no te corrigen los tipos estamos frente a un lenguaje débilmente tipado.
+ Deducimos que JS es de tipado débil, y esto usualmente hace referencia a que el compilador o el intérprete no evaluan el tipo de dato hasta que el programa se encuentra en ejecución. Así, si nos topamos con un caso en el que JS espere que la variable sea de un tipo, no lo sabremos hasta que el programa llegue a ese punto de ejecución.
 
-Otra caracteristica es que JS es case sensitive, esto quiere decir que distingue entre mayúsculas y minúsculas. Por lo que cada vez que asignes un nombre a una variable, función, objeto, etc, asegúrate de recordar que letras escribiste en mayúscula y minúscula pues JS es sensible a cada letra.
+ En general, si el compilador o intérprete no te corrigen los tipos estamos frente a un lenguaje débilmente tipado.
 
-Por ejemplo, en el siguiente bloque de código todas las variables son distintas:
+ Otra caracteristica es que JS es case sensitive, esto quiere decir que distingue entre mayúsculas y minúsculas. Por lo que cada vez que asignes un nombre a una variable, función, objeto, etc, asegúrate de recordar que letras escribiste en mayúscula y minúscula pues JS es sensible a cada letra.
 
-```javascript
-//JavaScript
-let edad = 24;
-let Edad = 24;
-let EDAD = 24;
-```
+ Por ejemplo, en el siguiente bloque de código todas las variables son distintas:
 
-## Qué es el DOM ##
+ ```javascript
+ //JavaScript
+ let edad = 24;
+ let Edad = 24;
+ let EDAD = 24;
+ ```
 
-### Desarrollo Web Profesional
+ ## Qué es el DOM ##
 
-Una vez que la página termina de cargarse, el navegador genera una representación de nuestro sitio web en forma de árbol, al que llamamos el Document Object Model, o como solemos llamarlo el DOM.
+ ### Desarrollo Web Profesional
 
-El DOM le permite a JavaScript acceder, recorrer, crear, reemplazar, editar y eliminar los elementos HTML que conforman nuestra página, es una interfaz de programación estándar, esto quiere decir que está pensado como un medio de comunicación para acceder a los elementos que forman nuestro sitio web.
+ Una vez que la página termina de cargarse, el navegador genera una representación de nuestro sitio web en forma de árbol, al que llamamos el Document Object Model, o como solemos llamarlo el DOM.
 
-El DOM se ve como un árbol en el que cada hoja o rama representa un elemento de HTML, la idea de representarlo como un árbol viene de buscar representar la jerarquía de nuestros documentos, es decir, quiénes son hijos de quién, cuáles son hermanos, etc.
+ El DOM le permite a JavaScript acceder, recorrer, crear, reemplazar, editar y eliminar los elementos HTML que conforman nuestra página, es una interfaz de programación estándar, esto quiere decir que está pensado como un medio de comunicación para acceder a los elementos que forman nuestro sitio web.
 
-Supongamos que nuestra página web se forma del siguiente código:
+ El DOM se ve como un árbol en el que cada hoja o rama representa un elemento de HTML, la idea de representarlo como un árbol viene de buscar representar la jerarquía de nuestros documentos, es decir, quiénes son hijos de quién, cuáles son hermanos, etc.
 
-```
-<html>
-    <head></head>
-    <body></body>
-</html>
-```
+ Supongamos que nuestra página web se forma del siguiente código:
 
-La representación de esta página tan sencilla sería tan simple como se ve a continuación:
-         
-<p align="center">
- <img src="https://user-images.githubusercontent.com/41757059/118345621-59201d80-b4fb-11eb-974e-0e9eaaa1535e.png">
-</p>
+ ```
+ <html>
+     <head></head>
+     <body></body>
+ </html>
+ ```
 
+ La representación de esta página tan sencilla sería tan simple como se ve a continuación:
 
-En este árbol, vemos como los elementos head y body son hijos de HTML, se deduce esto porque aparecen dentro de la declaración de la etiqueta HTML misma, entre la etiqueta que abre, y la que cierra
+ <p align="center">
+  <img width="500" src="https://user-images.githubusercontent.com/41757059/118345621-59201d80-b4fb-11eb-974e-0e9eaaa1535e.png">
+ </p>
 
-```
-<html>
-    <head></head>
-    <body></body>
-</html>
-```
 
-Esto nos permite introducir nuevos conceptos con los que vamos a referirnos a los elementos HTML, refiriéndonos al parentesco que existe entre ellos.
+ En este árbol, vemos como los elementos head y body son hijos de HTML, se deduce esto porque aparecen dentro de la declaración de la etiqueta HTML misma, entre la etiqueta que abre, y la que cierra
 
-En este ejemplo, decimos que head y body son hijos de html, y que html es su padre.
+ ```
+ <html>
+     <head></head>
+     <body></body>
+ </html>
+ ```
 
-Con el código a continuación:
+ Esto nos permite introducir nuevos conceptos con los que vamos a referirnos a los elementos HTML, refiriéndonos al parentesco que existe entre ellos.
 
-```
-<html>
-    <head></head>
-    <body>
-        <p></p>
-        <div></div>
-    </body>
-</html>
-```
+ En este ejemplo, decimos que head y body son hijos de html, y que html es su padre.
 
-Podemos inferir lo siguiente, que p y div son hermanos e hijos de body, también pudiéramos decir que tanto p como div son hijos de HTML, porque se encuentran dentro de su declaración, de igual manera, consideramos únicamente a head y body como hijos directos de HTML, porque es su padre inmediato, p y div por otro lado, no son hijos directos de html pero sí son de body.
+ Con el código a continuación:
 
-El DOM que representa este nuevo sitio se ve así:
+ ```
+ <html>
+     <head></head>
+     <body>
+         <p></p>
+         <div></div>
+     </body>
+ </html>
+ ```
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/41757059/118345733-1874d400-b4fc-11eb-9e16-10ea229394f8.jpg">
-</p>
+ Podemos inferir lo siguiente, que p y div son hermanos e hijos de body, también pudiéramos decir que tanto p como div son hijos de HTML, porque se encuentran dentro de su declaración, de igual manera, consideramos únicamente a head y body como hijos directos de HTML, porque es su padre inmediato, p y div por otro lado, no son hijos directos de html pero sí son de body.
 
+ El DOM que representa este nuevo sitio se ve así:
 
-A cada punto donde se conectan, o a cada elemento HTML, en el DOM, lo llamamos un nodo, en este caso tenemos un árbol con 6 nodos, uno por cada elemento HTML.
+ <p align="center">
+  <img width="630" src="https://user-images.githubusercontent.com/41757059/118345733-1874d400-b4fc-11eb-9e16-10ea229394f8.jpg">
+ </p>
 
-Más adelante vamos a ver cómo, con JavaScript, podemos buscar elementos en el árbol para modificarlos u obtener los valores del elemento mismo. También, como parte del lenguaje, tenemos herramientas para eliminar nodos, crearlos o moverlos.
 
-A continuación, puedes ver un vídeo con una explicación gráfica del DOM, parte del curso de manejo del DOM con JavaScript que puedes ver [aquí](https://codigofacilito.com/cursos/javascript-dom).
+ A cada punto donde se conectan, o a cada elemento HTML, en el DOM, lo llamamos un nodo, en este caso tenemos un árbol con 6 nodos, uno por cada elemento HTML.
 
-Otro ejemplo es el siguiente código:
+ Más adelante vamos a ver cómo, con JavaScript, podemos buscar elementos en el árbol para modificarlos u obtener los valores del elemento mismo. También, como parte del lenguaje, tenemos herramientas para eliminar nodos, crearlos o moverlos.
 
-<p align="center">
- <img width="665" alt="Captura de Pantalla 2021-05-14 a la(s) 21 39 18" src="https://user-images.githubusercontent.com/41757059/118345850-f760b300-b4fc-11eb-957a-e0058a8185f1.png">
-</p>
+ A continuación, puedes ver un vídeo con una explicación gráfica del DOM, parte del curso de manejo del DOM con JavaScript que puedes ver [aquí](https://codigofacilito.com/cursos/javascript-dom).
 
-Y su árbol...
+ Otro ejemplo es el siguiente código:
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/41757059/118345766-4823dc00-b4fc-11eb-8427-fc0451b727e4.jpg">
-</p>
+ <p align="center">
+  <img width="665" alt="Captura de Pantalla 2021-05-14 a la(s) 21 39 18" src="https://user-images.githubusercontent.com/41757059/118345850-f760b300-b4fc-11eb-957a-e0058a8185f1.png">
+ </p>
 
+ Y su árbol...
 
+ <p align="center">
+  <img width="665" src="https://user-images.githubusercontent.com/41757059/118345766-4823dc00-b4fc-11eb-8427-fc0451b727e4.jpg">
+ </p>
 
-## Cómo colocar código de JavaScript en tu página web ##
 
-Ahora que ya sabemos qué es JS y para qué nos va a servir, ya sabemos que existe una representación de nuestra página web que podemos acceder a través de nuestro código, vamos a ver cómo se puede ejecutar el o los scripts de JavaScript. Colocaremos una etiqueta script justo antes de que cierre el body, se recomienda que vaya al final de todo el sitio por razones de performance o de rendimiento de carga, de velocidad, aunque más adelante lo veremos.
 
-Dentro de la etiqueta script podemos colocar código que el navegador interpretará como un script de programación de JS y no como html tradicional, ejemplo:
-```
-<script type="text/javascript">
-    console.log("Hola mundo desde JS")
-</script>
-```
-Y lo anterior se imprimirá en la consola del navegador:
+ ## Cómo colocar código de JavaScript en tu página web ##
 
-<img width="397" alt="Captura de Pantalla 2021-05-13 a la(s) 23 18 24" src="https://user-images.githubusercontent.com/41757059/118220532-890aea80-b441-11eb-80a2-fa2199bd20c5.png">
+ Ahora que ya sabemos qué es JS y para qué nos va a servir, ya sabemos que existe una representación de nuestra página web que podemos acceder a través de nuestro código, vamos a ver cómo se puede ejecutar el o los scripts de JavaScript. Colocaremos una etiqueta script justo antes de que cierre el body, se recomienda que vaya al final de todo el sitio por razones de performance o de rendimiento de carga, de velocidad, aunque más adelante lo veremos.
 
-Si colocaras `console.log("Hola mundo desde JS")` fuera de la etiqueta script, imprimirá el texto como parte de la página web.
+ Dentro de la etiqueta script podemos colocar código que el navegador interpretará como un script de programación de JS y no como html tradicional, ejemplo:
 
-Aunque script sirve para poner código dentro de la misma cuando tenemos muchas instrucciones puede comenzar a resultar tedioso ponerlo ahí, por esta razón la etiqueta script solo se utiliza para cosas muy pequeñas que necesitemos en nuestra página web, para scripts más complejos, y que se vayan a reutilizar en muchas páginas web se crea un archivo de JS separado que contenga el programa, este archivo tendrá que tener terminación `.js`.
+ ```
+ <script type="text/javascript">
+     console.log("Hola mundo desde JS")
+ </script>
+ ```
 
-## Seleccionar elementos del DOM ##
+ Y lo anterior se imprimirá en la consola del navegador:
 
-Desde JS podemos buscar algún elemento (del DOM) para ejecutar acciones sobre ese elemento o utilizarlo para establecer una interacción con el usuario.
+ <p align="center">
+  <img width="397" alt="Captura de Pantalla 2021-05-13 a la(s) 23 18 24" src="https://user-images.githubusercontent.com/41757059/118220532-890aea80-b441-11eb-80a2-fa2199bd20c5.png">
+ </p>
 
-Veremos algunas de las formas más sencillas de buscar un elemento desde JS y que este en nuestra página web.
+ Si colocaras `console.log("Hola mundo desde JS")` fuera de la etiqueta script, imprimirá el texto como parte de la página web.
 
-`document` es la representación en JS de el DOM.  
-`document.querySelector("")` forma más fácil de hacer una búsqueda, dentro del querySelectos, se coloca el selector CSS que usaremos para buscar un elemento, ya hemos trabajado con selectores, por ejemplo los de clase que empiezan con un ., los de id que empiezan con un # o los de etiqueta que simplemente contienen el nombre.
+ Aunque script sirve para poner código dentro de la misma cuando tenemos muchas instrucciones puede comenzar a resultar tedioso ponerlo ahí, por esta razón la etiqueta script solo se utiliza para cosas muy pequeñas que necesitemos en nuestra página web, para scripts más complejos, y que se vayan a reutilizar en muchas páginas web se crea un archivo de JS separado que contenga el programa, este archivo tendrá que tener terminación `.js`.
 
-Veamos un ejemplo, `document.querySelector(".container");`, esto, recorrerá el DOM de la forma en que el navegador crea que es más conveniente buscando un elmento que tenga la clase container y nos lo va a retornar.
+ ## Seleccionar elementos del DOM ##
 
-QuerySelector unicamente nos devuelve un elemento, por ejemplo no seleccionaria todos los links de nuestra página, únicamente nos devolvería uno.
+ Desde JS podemos buscar algún elemento (del DOM) para ejecutar acciones sobre ese elemento o utilizarlo para establecer una interacción con el usuario.
 
-## Seleccionar múltiples elementos y recorrerlos ##
+ Veremos algunas de las formas más sencillas de buscar un elemento desde JS y que este en nuestra página web.
 
-Para seleccionar múltiples elementos cambiaremos a  `document.querySelectorAll(".container");`.
-Pero, ¿cuál es la diferencia con `document.querySelector(".container");`?
+ `document` es la representación en JS de el DOM.  
 
-Pues bueno, `document.querySelector(".container");` nos devuelve un elemento aunque existan muchos elementos que cumplan el criterio de búsqueda que colocamos, solo devolverá el primero y `document.querySelector(".container");` recorrerá todo el árbol buscando todos los elementos que cumplan con el criterio de busqueda.
-QuerySelectorAll nos devolverá una lista, esto debido a que puede contener uno o muchos elementos dependiendo de cuantos encuentre en la busqueda.
-Cuando imprimimos lo siguiente:
-```
-let links = document.querySelectorAll("a"); 
+ `document.querySelector("")` es la forma más fácil de hacer una búsqueda, dentro del querySelectos, se coloca el selector CSS que usaremos para buscar un elemento, ya hemos trabajado con selectores, por ejemplo los de clase que empiezan con un `.`, los de id que empiezan con un `#` o los de etiqueta que simplemente contienen el nombre.
 
-console.log(links);
-```
-La consola nos devuelve `NodeList(4) [a, a, a, a]`, esto es que tenemos una lista de nodos y cada elemento html se conoce como nodo, por eso la estructura lleva nombre de NodeList.
+ Veamos un ejemplo, `document.querySelector(".container");`, esto, recorrerá el DOM de la forma en que el navegador crea que es más conveniente buscando un elmento que tenga la clase container y nos lo va a retornar.
 
-## Eventos ##
+ QuerySelector unicamente nos devuelve un elemento, i.e., no seleccionaría todos los links de nuestra página, únicamente nos devolvería uno.
 
-Los eventos nos sirven para que nosotros podamos adjuntar, atar o unir una acción del usuario con una acción de un programa, por ejemplo cada que un usuario de click a algún elemento podemos ejecutar alguna acción.
+ ## Seleccionar múltiples elementos y recorrerlos ##
 
-Veamos un ejemplo:
+ Para seleccionar múltiples elementos cambiaremos a  `document.querySelectorAll(".container");`.
 
-```javascript
+ Pero, ¿cuál es la diferencia con `document.querySelector(".container");`?
 
-// Celdas de nuestra tabla
-let celdas = document.querySelectorAll("td"); 
+ `document.querySelector(".container");` nos devuelve un elemento aunque existan muchos elementos que cumplan el criterio de búsqueda que colocamos, solo devolverá el primero y `document.querySelector(".container");` recorrerá todo el árbol buscando todos los elementos que cumplan con el criterio de búsqueda.
+ QuerySelectorAll nos devolverá una lista, esto debido a que puede contener uno o muchos elementos dependiendo de cuantos encuentre en la búsqueda.
 
-// Por cada una de las celdas, vamos a enlazar una acción 
-// con algún evento del usuario (para eso utilizamos 
-// addEventListener) que tienen todos los nodos al usar JS.
-celdas.forEach(function(td){
-    // Recibe el evento (nombre) y la función con las acciones
-    // que se van a realizar cuando esta interacción del usuario
-    // suceda, i.e., cuando haya un click.
-    td.addEventListener('click', function(){
-        console.log("click");
-    })
-})
-```
+ Cuando imprimimos lo siguiente:
 
-## Comportamiento por defecto de un evento ##
+ ```
+ let links = document.querySelectorAll("a"); 
 
-Existen algunos eventos que tienen un comportamiento por defecto en la página,
-por ejemplo los links tienen el comportamiento por defecto de cuando presiones click te muevan hacía otra página, la manera en la que podemos prevenir que el comportamiento por defecto se ejecute es el siguiente:
+ console.log(links);
+ ```
 
-_La primera forma es:_
-Es un objeto que contiene toda la información de un evento cuando este sucede:
-` evento.preventDefault();`
+ La consola nos devuelve `NodeList(4) [a, a, a, a]`, esto quiere decir que tenemos una lista de nodos y recordemos que cada elemento html se conoce como nodo, por eso es que la estructura lleva nombre de NodeList.
 
-_La segunda forma es:_
-Retornar falso o que el resultado de toda esta función sea falso para que el navegador sepa que no debe ejecutar el comportamiento por defecto.
+ ## Eventos ##
 
-## Quitar y Agregar clases a un elemento con JavaScript ##
+ Los eventos nos sirven para que nosotros podamos adjuntar, atar o unir una acción del usuario con una acción de un programa, por ejemplo, cada que un usuario de click a algún elemento podemos ejecutar alguna acción.
 
-Algo que será útil para nuestro proyecto es aprender cómo quitar y ponerle clases a un elemento, por ejemplo: 
+ Veamos un ejemplo:
 
-En esta sección del código:
-```javascript
-        //Quitarle clases de animación que ya tiene.
-        content.classList.remove('animate__fadeInDown');
-        content.classList.remove('animate__animated');
+ ```javascript
 
-        //Agregar clases para animar su salida (fadeOutUp)
-        content.classList.add('animate__fadeOutUp');
-        content.classList.add('animate__animated');
-```
+ // Celdas de nuestra tabla
+ let celdas = document.querySelectorAll("td"); 
 
-Código completo:
+ // Por cada una de las celdas, vamos a enlazar una acción 
+ // con algún evento del usuario (para eso utilizamos 
+ // addEventListener) que tienen todos los nodos al usar JS.
+ celdas.forEach(function(td){
 
-```javascript
-// 1.- Obtener elementos de la clase .close
+     // Recibe el evento (nombre) y la función con las acciones
+     // que se van a realizar cuando esta interacción del usuario
+     // suceda, i.e., cuando haya un click.
+     td.addEventListener('click', function(){
+         console.log("click");
+     })
+ })
+ ```
 
-let links = document.querySelectorAll(".close"); 
+ ## Comportamiento por defecto de un evento ##
 
-// 2.- Recorrer los elementos
+ Existen algunos eventos que tienen un comportamiento por defecto en la página, por ejemplo, los links tienen el comportamiento por defecto de que cuando presionemos click nos muevan hacía otra página, la manera en la que podemos prevenir que el comportamiento por defecto se ejecute es el siguiente:
 
-links.forEach(function(link){
-    // 3.-Agregar un evento click a cada uno de ellos
-    link.addEventListener('click', function(evento){
-        evento.preventDefault(); //Bloquea el comportamiento por defecto y evita que se ejecute.
+ _La primera forma es:_
+ Es un objeto que contiene toda la información de un evento cuando este sucede:
+ ` evento.preventDefault();`
 
+ _La segunda forma es:_
+ Retornar falso o que el resultado de toda esta función sea falso para que el navegador sepa que no debe ejecutar el comportamiento por defecto.
 
-        //Agarrar content 
-        let content = document.querySelector('.content'); 
+ ## Quitar y Agregar clases a un elemento con JavaScript ##
 
-        //Quitarle clases de animación que ya tiene.
-        content.classList.remove('animate__fadeInDown');
-        content.classList.remove('animate__animated');
+ Algo que será útil para nuestro proyecto es aprender cómo quitar y ponerle clases a un elemento, por ejemplo: 
 
-        //Agregar clases para animar su salida (fadeOutUp)
-        content.classList.add('animate__fadeOutUp');
-        content.classList.add('animate__animated');
+ En esta sección del código:
 
-        /* Nota:
-         * Los archivos no se actualizaban en el localhost,
-         * para solucionarlo se limpió el caché del navegador.
-        */
-        
+ ```javascript
+         //Quitarle clases de animación que ya tiene.
+         content.classList.remove('animate__fadeInDown');
+         content.classList.remove('animate__animated');
 
-        return false;
-    });
-});
-```
+         //Agregar clases para animar su salida (fadeOutUp)
+         content.classList.add('animate__fadeOutUp');
+         content.classList.add('animate__animated');
+ ```
 
-## Timers ##
+ Código completo:
 
-Cómo podemos movernos entre documentos desde JS, bueno pues hay un objeto que se llama location que tiene un atributo que se llama href (`location.href = "/";`) que cuando modificamos su valor nos redirecciona hacía allá.
+ ```javascript
+ // 1.- Obtener elementos de la clase .close
 
-El CPU de una computadora, ejecuta las instrucciones de un programa de manera muy rápida, un CPU muy simple puede ejecutar miles de operaciones por segundo por lo que en nuestro código 
+ let links = document.querySelectorAll(".close"); 
 
-```javascript
+ // 2.- Recorrer los elementos
 
-let links = document.querySelectorAll(".close"); 
+ links.forEach(function(link){
+     // 3.-Agregar un evento click a cada uno de ellos
+     link.addEventListener('click', function(evento){
+         evento.preventDefault(); //Bloquea el comportamiento por defecto y evita que se ejecute.
 
-links.forEach(function(link){
-    // 
-    link.addEventListener('click', function(evento){
-        evento.preventDefault(); 
 
-        let content = document.querySelector('.content'); 
+         //Agarrar content 
+         let content = document.querySelector('.content'); 
 
+         //Quitarle clases de animación que ya tiene.
+         content.classList.remove('animate__fadeInDown');
+         content.classList.remove('animate__animated');
 
-        content.classList.remove('animate__fadeInDown');
-        content.classList.remove('animate__animated');
+         //Agregar clases para animar su salida (fadeOutUp)
+         content.classList.add('animate__fadeOutUp');
+         content.classList.add('animate__animated');
 
+         /* Nota:
+          * Los archivos no se actualizaban en el localhost,
+          * para solucionarlo se limpió el caché del navegador.
+         */
 
-        content.classList.add('animate__fadeOutUp');
-        content.classList.add('animate__animated');
 
-        location.href = "/"; 
+         return false;
+     });
+ });
+ ```
 
-        return false;
-    });
-});
+ ## Timers ##
 
-```
+ ¿Cómo podemos movernos entre documentos desde JS?  
+ Hay un objeto que se llama _location_ que tiene un atributo que se llama href (`location.href = "/";`) el cual, cuando modificamos su valor nos redirecciona hacía allá.
 
-La línea de `location.href = "/";` se ejecuta inmediatamente después de las anteriores de manera que no se percibe bien el movimiento o la animación.
+ El CPU de una computadora, ejecuta las instrucciones de un programa de manera muy rápida, un CPU muy simple puede ejecutar miles de operaciones por segundo por lo que en nuestro código 
 
-Hay dos maneras de hacer que las instrucciones se retrasen un poco:
-1.- setTimeout
-2.- setInterval
-Ambas funciones son relevantes para hacerlo, ambas nos permiten ejecutar ciertas instrucciones de código después de cierto tiempo, en el caso de setTimeout lo hace después de cierto tiempo una vez, y en el caso de setInterval lo hace después de cierto tiempo constantemente (i.e., las acciones dentro de la función se ejecutaran constantemente cada un segundo).
+ ```javascript
 
-## Organiza tu código ##
-Es necesario identar nuestros códigos.
-Una buena estrategia para poder seguir una secuencia de pasos al solucionar un problema es colocar en comentarios que tenemos que ir haciendo y después abajo de ellos colocar las instrucciones para completar la tarea indicada en el comentario.
-En JS los comentarios empiezan con `//` y cuando se trata de comentarios multilínea es `/* */`. También son buenos para usarlos como descriptores de que es lo que esta haciendo cada una de las instrucciones de código.
+ let links = document.querySelectorAll(".close"); 
 
-Incluso si abandonas durante meses tu código, al regresar debe poder ser entendible, no olvides eso.
+ links.forEach(function(link){
 
-## Subir proyecto ##
+     link.addEventListener('click', function(evento){
+         evento.preventDefault(); 
 
-Subimos nuestro proyecto a github.
+         let content = document.querySelector('.content'); 
 
-Nota: Vaciar el caché evita que el navegador guarde versiones viejas de la página.
+
+         content.classList.remove('animate__fadeInDown');
+         content.classList.remove('animate__animated');
+
+
+         content.classList.add('animate__fadeOutUp');
+         content.classList.add('animate__animated');
+
+         location.href = "/"; 
+
+         return false;
+     });
+ });
+
+ ```
+
+ La línea de `location.href = "/";` se ejecuta inmediatamente después de las anteriores de manera que no se percibe bien el movimiento o la animación.
+
+ Hay dos maneras de hacer que las instrucciones se retrasen un poco:  
+ 1.- setTimeout  
+ 2.- setInterval  
+ Ambas funciones son relevantes para hacerlo, ambas nos permiten ejecutar ciertas instrucciones de código después de cierto tiempo, en el caso de setTimeout lo hace después de cierto tiempo una vez, y en el caso de setInterval lo hace después de cierto tiempo constantemente (i.e., las acciones dentro de la función se ejecutaran constantemente cada un segundo).
+
+ ## Organiza tu código ##
+ Es necesario identar nuestros códigos.  
+ Una buena estrategia para poder seguir una secuencia de pasos al solucionar un problema es colocar en comentarios que tenemos que ir haciendo y después abajo de ellos colocar las instrucciones para completar la tarea indicada en el comentario.  
+ En JS los comentarios empiezan con `//` y cuando se trata de comentarios multilínea es `/* */`. También son buenos para usarlos como descriptores de que es lo que esta haciendo cada una de las instrucciones de código.
+
+ _Nota: Incluso si abandonas durante meses tu código, al regresar debe poder ser entendible, no olvides eso._
+
+ ## Subir proyecto ##
+
+ Subimos nuestro proyecto a github.
+
+ _Nota: Vaciar el caché evita que el navegador guarde versiones viejas de la página._
 
 # Despedida #
 
-## Recapitulación del segundo proyecto ##
+ ## Recapitulación del segundo proyecto ##
 
-¿Qué aprendimos en el proyecto "boletines"?  
-Aprendimos:
-- Como montar un servidor local en nuestra computadora, como acceder con localhost.
-- Aprendimos CSS desde archivos externos.
-- Varios tipos de selectores y su importancia.
-- Necesidad de normalizadores CSS que quitan estilos que los distintos navegadores agregan a ciertos elementos de nuestra página web.
-- Importantancia de utilizar apropiadamente las etiquetas HTML para darle sentido a nuestra página.
-- Como colocar tablas, iconos, imagenes, fuentes personalizadas, etc
-- Agregar más de una página a el proyecto.
-- Movernos entre páginas.
-- Cualidades de CSS (colores y fondos, degradado, compatibilidad de navegadores, posicionadores, modificar texto, etc)
-- Estilizar nuestra tabla
-- Shorthand properties.
-- Especificidad.
-- Posicionamiento de elementos.
-- Animaciones.
-- Pseudo selectores.
-- Mobile First.
-- Entre otras.
+ ¿Qué aprendimos en el proyecto "boletines"?  
 
-## Qué cursos tomar a continuación ##
+ En este proyecto aprendimos cómo montar un servidor local en nuestra computadora, cómo acceder con localhost, la importancia de los selectores, movernos entre páginas, a estilizar nuestra tabla, entre otras.
 
-[http://codigofacilito.com/especialidades/desarrollador-frontend](http://codigofacilito.com/especialidades/desarrollador-frontend)
+ ## Qué cursos tomar a continuación ##
 
-## Despedida del curso ##
-Ahora ya tienes los fundamentos para crear páginas web por tu cuenta, hoy en día en desarrollo web tenemos conceptos como las aplicaciones web progresivas, tenemos muchos frameworks de JS como react, angular, view, etc...
+ En caso de que queramos profundizar en el Desarrollo Web Frontend, se recomiendan los siguientes [cursos.](http://codigofacilito.com/especialidades/desarrollador-frontend)
 
-# Certificado #
+ ## Despedida del curso ##
+ Ahora ya tenemos los fundamentos para crear páginas web por nuestra cuenta. Hoy en día en desarrollo web tenemos conceptos como las aplicaciones web progresivas, tenemos muchos frameworks de JS como react, angular, view, etc...
+
+ ¡Nunca pares de aprender!
+
+# Certificado  :partying_face:
 ![certificado](https://user-images.githubusercontent.com/41757059/118324936-548e4180-b4c8-11eb-8bb7-cfef6af180ce.png)
 
 
